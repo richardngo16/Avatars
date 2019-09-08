@@ -4,7 +4,9 @@ import {
   getFaceData,
   mapTopType,
   mapHairColor,
-  mapGlasses
+  mapGlasses,
+  mapFacialHair,
+  mapSkin
 } from "./utils/util";
 import Button from "@material-ui/core/Button";
 import Avatar from "avataaars";
@@ -67,10 +69,12 @@ const App = () => {
           topType={mapTopType(apiResponseData)}
           hairColor={mapHairColor(apiResponseData)}
           accessoriesType={mapGlasses(apiResponseData)}
+          facialHairType={mapFacialHair(apiResponseData)}
           clotheType="Hoodie"
           clotheColor="Black"
           eyeType="Default"
           eyebrowType="Default"
+          Skin={mapSkin(apiResponseData)}
         />
       )}
     </div>

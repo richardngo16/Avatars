@@ -82,6 +82,8 @@ export const mapTopType = apiDataResponse => {
     case "short":
       return "ShortHairRound";
     case "average":
+      return "ShortHairShortWaved";
+    case "long":
       return "LongHairNotTooLong";
     default:
       return "LongHairStraight";
@@ -116,4 +118,38 @@ export const mapGlasses = apiDataResponse => {
     return field.name === "glasses";
   })[0].value;
   return hasGlasses === "yes" ? "Prescription02" : "Blank";
+};
+
+export const mapFacialHair = apiDataResponse => {
+  //hair beard - none, short, thick
+  const hasBeard = apiDataResponse.filter(field => {
+    return field.name === "hair beard";
+  })[0];
+
+  console.log("has beard", hasBeard);
+
+  if ((hasBeard.value !== "none") & (hasBeard.confidence > 0.75)) {
+    return "BeardLight";
+  }
+
+  const hasMustache = apiDataResponse.filter(field => {
+    return field.name === "hair mustache";
+  })[0];
+
+  if ((hasMustache.value !== "none") & (hasMustache.confidence > 0.7)) {
+    return "MustacheFancy";
+  }
+  return "Blank";
+};
+
+export const mapSkin = apiDataResponse => {
+  //race - asian-middle-eastern, asian, african-american, hispanic, white, middle eastern, othe
+  const race = apiDataResponse.filter(field => {
+    return field.name === "race";
+  })[0];
+  if (race.value === "white" && race.confidence > 0.9) return "Pale";
+  if (race.value === "hispanic" && race.confidence > 0.9) return "Tanned";
+  if (race.value === "african-american" && race.confidence > 0.9)
+    return "Black";
+  return "Light";
 };
