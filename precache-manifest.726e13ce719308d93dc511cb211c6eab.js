@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "b4ccc41328f4107edef10f9e5abd906f",
+    "revision": "051e27c977d7248e98832d35f7be93e3",
     "url": "/Avatars/index.html"
   },
   {
-    "revision": "1db9bd8c6bac416205f0",
+    "revision": "2d613f4beaf6cb892bbf",
     "url": "/Avatars/static/css/main.b4cbbbb9.chunk.css"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Avatars/static/js/2.30c36f6c.chunk.js"
   },
   {
-    "revision": "1db9bd8c6bac416205f0",
-    "url": "/Avatars/static/js/main.3d80f882.chunk.js"
+    "revision": "2d613f4beaf6cb892bbf",
+    "url": "/Avatars/static/js/main.569b7df8.chunk.js"
   },
   {
     "revision": "acf4280a4ea218f3207d",
