@@ -85,8 +85,10 @@ export const mapTopType = apiDataResponse => {
       return "ShortHairShortWaved";
     case "long":
       return "LongHairNotTooLong";
-    default:
+    case "very long":
       return "LongHairStraight";
+    default:
+      return "ShortHairShortCurly";
   }
 };
 
