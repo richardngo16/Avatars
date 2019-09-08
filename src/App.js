@@ -22,9 +22,11 @@ const App = () => {
   //states
   const [uiState, setUiState] = useState("camera");
   const [apiResponseData, setApiResponseData] = useState([]);
+  const [screenshot, setScreenshot] = useState("");
   const webcamRef = React.useRef(null);
   const capture = React.useCallback(async () => {
     const imageSrc = webcamRef.current.getScreenshot();
+    setScreenshot(imageSrc);
     setUiState("loading");
     const data = await getFaceData(imageSrc);
     setApiResponseData(data);
@@ -64,18 +66,25 @@ const App = () => {
       {uiState === "camera" && <CameraMode />}
       {uiState === "loading" && <LoadingScreen />}
       {uiState === "avatar" && (
-        <Avatar
-          avatarStyle="Circle"
-          topType={mapTopType(apiResponseData)}
-          hairColor={mapHairColor(apiResponseData)}
-          accessoriesType={mapGlasses(apiResponseData)}
-          facialHairType={mapFacialHair(apiResponseData)}
-          clotheType="Hoodie"
-          clotheColor="Black"
-          eyeType="Default"
-          eyebrowType="Default"
-          Skin={mapSkin(apiResponseData)}
-        />
+        <div>
+          <h1> Avatar </h1>
+          <Avatar
+            avatarStyle="Circle"
+            topType={mapTopType(apiResponseData)}
+            hairColor={mapHairColor(apiResponseData)}
+            accessoriesType={mapGlasses(apiResponseData)}
+            facialHairType={mapFacialHair(apiResponseData)}
+            clotheType="Hoodie"
+            clotheColor="Black"
+            eyeType="Default"
+            eyebrowType="Default"
+            Skin={mapSkin(apiResponseData)}
+          />
+          <div>
+            <h1> Original </h1>
+            <img src={screenshot} alt="Original" />
+          </div>
+        </div>
       )}
     </div>
   );
