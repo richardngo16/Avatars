@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/richardngo16.github.io/Avatars/static/css/main.b4cbbbb9.chunk.css",
-    "main.js": "/richardngo16.github.io/Avatars/static/js/main.dfa7b1ce.chunk.js",
-    "main.js.map": "/richardngo16.github.io/Avatars/static/js/main.dfa7b1ce.chunk.js.map",
-    "runtime~main.js": "/richardngo16.github.io/Avatars/static/js/runtime~main.b0cb18b7.js",
-    "runtime~main.js.map": "/richardngo16.github.io/Avatars/static/js/runtime~main.b0cb18b7.js.map",
-    "static/js/2.30c36f6c.chunk.js": "/richardngo16.github.io/Avatars/static/js/2.30c36f6c.chunk.js",
-    "static/js/2.30c36f6c.chunk.js.map": "/richardngo16.github.io/Avatars/static/js/2.30c36f6c.chunk.js.map",
-    "index.html": "/richardngo16.github.io/Avatars/index.html",
-    "precache-manifest.5dffe79fa4a2212c31e10c174638273e.js": "/richardngo16.github.io/Avatars/precache-manifest.5dffe79fa4a2212c31e10c174638273e.js",
-    "service-worker.js": "/richardngo16.github.io/Avatars/service-worker.js",
-    "static/css/main.b4cbbbb9.chunk.css.map": "/richardngo16.github.io/Avatars/static/css/main.b4cbbbb9.chunk.css.map"
+    "main.css": "/Avatars/static/css/main.b4cbbbb9.chunk.css",
+    "main.js": "/Avatars/static/js/main.3d80f882.chunk.js",
+    "main.js.map": "/Avatars/static/js/main.3d80f882.chunk.js.map",
+    "runtime~main.js": "/Avatars/static/js/runtime~main.dcf868ef.js",
+    "runtime~main.js.map": "/Avatars/static/js/runtime~main.dcf868ef.js.map",
+    "static/js/2.30c36f6c.chunk.js": "/Avatars/static/js/2.30c36f6c.chunk.js",
+    "static/js/2.30c36f6c.chunk.js.map": "/Avatars/static/js/2.30c36f6c.chunk.js.map",
+    "index.html": "/Avatars/index.html",
+    "precache-manifest.327d94ad059178636978e519d2b96ee1.js": "/Avatars/precache-manifest.327d94ad059178636978e519d2b96ee1.js",
+    "service-worker.js": "/Avatars/service-worker.js",
+    "static/css/main.b4cbbbb9.chunk.css.map": "/Avatars/static/css/main.b4cbbbb9.chunk.css.map"
   }
 }
