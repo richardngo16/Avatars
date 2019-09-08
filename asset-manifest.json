@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/richardngo16.github.io/avatars/static/css/main.b4cbbbb9.chunk.css",
-    "main.js": "/richardngo16.github.io/avatars/static/js/main.7473dc3e.chunk.js",
-    "main.js.map": "/richardngo16.github.io/avatars/static/js/main.7473dc3e.chunk.js.map",
-    "runtime~main.js": "/richardngo16.github.io/avatars/static/js/runtime~main.24bb0cfd.js",
-    "runtime~main.js.map": "/richardngo16.github.io/avatars/static/js/runtime~main.24bb0cfd.js.map",
-    "static/js/2.30c36f6c.chunk.js": "/richardngo16.github.io/avatars/static/js/2.30c36f6c.chunk.js",
-    "static/js/2.30c36f6c.chunk.js.map": "/richardngo16.github.io/avatars/static/js/2.30c36f6c.chunk.js.map",
-    "index.html": "/richardngo16.github.io/avatars/index.html",
-    "precache-manifest.2bd213349c9c5d1c7fcb3b27efb9f62f.js": "/richardngo16.github.io/avatars/precache-manifest.2bd213349c9c5d1c7fcb3b27efb9f62f.js",
-    "service-worker.js": "/richardngo16.github.io/avatars/service-worker.js",
-    "static/css/main.b4cbbbb9.chunk.css.map": "/richardngo16.github.io/avatars/static/css/main.b4cbbbb9.chunk.css.map"
+    "main.css": "/richardngo16.github.io/Avatars/static/css/main.b4cbbbb9.chunk.css",
+    "main.js": "/richardngo16.github.io/Avatars/static/js/main.dfa7b1ce.chunk.js",
+    "main.js.map": "/richardngo16.github.io/Avatars/static/js/main.dfa7b1ce.chunk.js.map",
+    "runtime~main.js": "/richardngo16.github.io/Avatars/static/js/runtime~main.b0cb18b7.js",
+    "runtime~main.js.map": "/richardngo16.github.io/Avatars/static/js/runtime~main.b0cb18b7.js.map",
+    "static/js/2.30c36f6c.chunk.js": "/richardngo16.github.io/Avatars/static/js/2.30c36f6c.chunk.js",
+    "static/js/2.30c36f6c.chunk.js.map": "/richardngo16.github.io/Avatars/static/js/2.30c36f6c.chunk.js.map",
+    "index.html": "/richardngo16.github.io/Avatars/index.html",
+    "precache-manifest.5dffe79fa4a2212c31e10c174638273e.js": "/richardngo16.github.io/Avatars/precache-manifest.5dffe79fa4a2212c31e10c174638273e.js",
+    "service-worker.js": "/richardngo16.github.io/Avatars/service-worker.js",
+    "static/css/main.b4cbbbb9.chunk.css.map": "/richardngo16.github.io/Avatars/static/css/main.b4cbbbb9.chunk.css.map"
   }
 }
