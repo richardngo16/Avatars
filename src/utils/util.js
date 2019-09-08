@@ -14,7 +14,7 @@ const betaFaceRequest = imageSrc => {
   return fetch("https://www.betafaceapi.com/api/v2/media", options);
 };
 
-const getFaceData = async imageSrc => {
+export const getFaceData = async imageSrc => {
   try {
     const data = await (await betaFaceRequest(imageSrc)).json();
     return data.media.faces[0].tags;
@@ -29,13 +29,13 @@ const getFaceData = async imageSrc => {
 //   "value": "no",
 //   "confidence": 0.43
 // }
-export const mapHairData = apiDataResponse => {
+export const mapTopType = apiDataResponse => {
   const wearingHat = apiDataResponse.filter(field => {
     return field.name === "wearing hat";
-  })[0].value;
+  })[0];
 
-  console.log("Wearing Hat?", wearingHat);
-  if (wearingHat === "yes") {
+  console.log("Wearing Hat?", wearingHat.value);
+  if (wearingHat.value === "yes" && wearingHat.confidence > 0.8) {
     console.log("yes hat");
     return "Hat";
   }
@@ -55,12 +55,65 @@ export const mapHairData = apiDataResponse => {
     return "NoHair";
   }
 
-  //none, very short, short, average, long, very long
+  // none, very short, short, average, long, very long
   const hairLength = apiDataResponse.filter(field => {
     return field.name === "hair length";
   })[0].value;
-  console.log("hair length", hairLength);
 
-  return "ShortHairFrizzle";
+  // very short, short, average, thick, very thick
+  const hairTop = apiDataResponse.filter(field => {
+    return field.name === "hair top";
+  })[0].value;
+  console.log("hair length", hairLength);
+  console.log("hair top", hairTop);
+
+  switch (hairLength) {
+    case "none":
+      // already did NoHair This is Sanity Check
+      if (hairTop === "very short") {
+        return "ShortHairTheCaesar";
+      }
+      if (hairTop === "short") {
+        return "ShortHairRound";
+      }
+      break;
+    case "very short":
+      return "ShortHairTheCaesar";
+    case "short":
+      return "ShortHairRound";
+    case "average":
+      return "LongHairNotTooLong";
+    default:
+      return "LongHairStraight";
+  }
 };
-export { getFaceData };
+
+export const mapHairColor = apiDataResponse => {
+  //black, blond, red, brown, brown light, not natural light, not natural
+  const hairColor = apiDataResponse.filter(field => {
+    return field.name === "hair color type";
+  })[0];
+  console.log("haircolor", hairColor);
+  switch (hairColor.value) {
+    case "black":
+      return "Black";
+    case "blond":
+      return "Blonde";
+    case "brown":
+      return "BrownDark";
+    case "brown light":
+      return "Brown";
+    case "red":
+      if (hairColor.confidence > 0.8) return "Red";
+      break;
+    default:
+      return "Brown";
+  }
+};
+
+export const mapGlasses = apiDataResponse => {
+  const hasGlasses = apiDataResponse.filter(field => {
+    return field.name === "glasses";
+  })[0].value;
+  return hasGlasses === "yes" ? "Prescription02" : "Blank";
+};

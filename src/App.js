@@ -1,6 +1,11 @@
 import React, { useState } from "react";
 import Webcam from "react-webcam";
-import { getFaceData, mapHairData } from "./utils/util";
+import {
+  getFaceData,
+  mapTopType,
+  mapHairColor,
+  mapGlasses
+} from "./utils/util";
 import Button from "@material-ui/core/Button";
 import Avatar from "avataaars";
 
@@ -20,7 +25,6 @@ const App = () => {
     const imageSrc = webcamRef.current.getScreenshot();
     setUiState("loading");
     const data = await getFaceData(imageSrc);
-    console.log(data);
     setApiResponseData(data);
     setUiState("avatar");
   }, [webcamRef]);
@@ -59,7 +63,10 @@ const App = () => {
       {uiState === "loading" && <LoadingScreen />}
       {uiState === "avatar" && (
         <Avatar
-          topType={mapHairData(apiResponseData)}
+          avatarStyle="Circle"
+          topType={mapTopType(apiResponseData)}
+          hairColor={mapHairColor(apiResponseData)}
+          accessoriesType={mapGlasses(apiResponseData)}
           clotheType="Hoodie"
           clotheColor="Black"
           eyeType="Default"
