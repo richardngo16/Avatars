@@ -23,18 +23,11 @@ export const getFaceData = async imageSrc => {
   }
 };
 
-// Takes in Array of Data
-// {
-//   "name": "5oclock shadow",
-//   "value": "no",
-//   "confidence": 0.43
-// }
 export const mapTopType = apiDataResponse => {
   const wearingHat = apiDataResponse.filter(field => {
     return field.name === "wearing hat";
   })[0];
 
-  console.log("Wearing Hat?", wearingHat.value);
   if (wearingHat.value === "yes" && wearingHat.confidence > 0.8) {
     console.log("yes hat");
     return "Hat";
@@ -43,13 +36,6 @@ export const mapTopType = apiDataResponse => {
   const noHairCheck = apiDataResponse.filter(field => {
     return field.name === "bald";
   })[0];
-
-  console.log(
-    "NoHair?",
-    noHairCheck.value,
-    "Confidence?",
-    noHairCheck.confidence
-  );
 
   if (noHairCheck.value === "yes" && noHairCheck.confidence >= 0.9) {
     return "NoHair";
@@ -64,8 +50,6 @@ export const mapTopType = apiDataResponse => {
   const hairTop = apiDataResponse.filter(field => {
     return field.name === "hair top";
   })[0].value;
-  console.log("hair length", hairLength);
-  console.log("hair top", hairTop);
 
   switch (hairLength) {
     case "none":
@@ -97,7 +81,6 @@ export const mapHairColor = apiDataResponse => {
   const hairColor = apiDataResponse.filter(field => {
     return field.name === "hair color type";
   })[0];
-  console.log("haircolor", hairColor);
   switch (hairColor.value) {
     case "black":
       return "Black";
@@ -127,8 +110,6 @@ export const mapFacialHair = apiDataResponse => {
   const hasBeard = apiDataResponse.filter(field => {
     return field.name === "hair beard";
   })[0];
-
-  console.log("has beard", hasBeard);
 
   if ((hasBeard.value !== "none") & (hasBeard.confidence > 0.75)) {
     return "BeardLight";
