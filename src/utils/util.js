@@ -23,13 +23,13 @@ export const getFaceData = async imageSrc => {
   }
 };
 
+// Functions to Map to Sketch Properties
 export const mapTopType = apiDataResponse => {
   const wearingHat = apiDataResponse.filter(field => {
     return field.name === "wearing hat";
   })[0];
 
   if (wearingHat.value === "yes" && wearingHat.confidence > 0.8) {
-    console.log("yes hat");
     return "Hat";
   }
 
