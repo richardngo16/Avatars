@@ -1,15 +1,8 @@
 import React, { useState } from "react";
 import Webcam from "react-webcam";
-import {
-  getFaceData,
-  mapTopType,
-  mapHairColor,
-  mapGlasses,
-  mapFacialHair,
-  mapSkin
-} from "./utils/util";
+import { getFaceData } from "./utils/util";
 import Button from "@material-ui/core/Button";
-import Avatar from "avataaars";
+import UserAvatar from "./components/UserAvatar";
 
 // TODO Split this file into different components
 // Use contextapi if needed
@@ -66,25 +59,7 @@ const App = () => {
       {uiState === "camera" && <CameraMode />}
       {uiState === "loading" && <LoadingScreen />}
       {uiState === "avatar" && (
-        <div>
-          <h1> Avatar </h1>
-          <Avatar
-            avatarStyle="Circle"
-            topType={mapTopType(apiResponseData)}
-            hairColor={mapHairColor(apiResponseData)}
-            accessoriesType={mapGlasses(apiResponseData)}
-            facialHairType={mapFacialHair(apiResponseData)}
-            clotheType="Hoodie"
-            clotheColor="Black"
-            eyeType="Default"
-            eyebrowType="Default"
-            Skin={mapSkin(apiResponseData)}
-          />
-          <div>
-            <h1> Original </h1>
-            <img src={screenshot} alt="Original" />
-          </div>
-        </div>
+        <UserAvatar apiResponseData={apiResponseData} screenshot={screenshot} />
       )}
     </div>
   );
