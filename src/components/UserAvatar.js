@@ -27,7 +27,7 @@ const UserAvatar = props => {
       />
       <div>
         <h1> Original </h1>
-        <img src={screenshot} alt="Original" />
+        <img style={{height: '300px', width: '350px'}} src={screenshot} alt="Original" />
       </div>
     </div>
   );
