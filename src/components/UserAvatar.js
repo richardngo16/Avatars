@@ -5,10 +5,9 @@ import {
   mapHairColor,
   mapGlasses,
   mapFacialHair,
-  mapSkin
 } from "../utils/util";
 
-const UserAvatar = props => {
+const UserAvatar = (props) => {
   const { apiResponseData, screenshot } = props;
   return (
     <div>
@@ -23,11 +22,14 @@ const UserAvatar = props => {
         clotheColor="Black"
         eyeType="Default"
         eyebrowType="Default"
-        Skin={mapSkin(apiResponseData)}
       />
       <div>
         <h1> Original </h1>
-        <img style={{height: '300px', width: '350px'}} src={screenshot} alt="Original" />
+        <img
+          style={{ height: "300px", width: "350px" }}
+          src={screenshot}
+          alt="Original"
+        />
       </div>
     </div>
   );
