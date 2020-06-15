@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/Avatars/static/css/main.b4cbbbb9.chunk.css",
-    "main.js": "/Avatars/static/js/main.34386852.chunk.js",
-    "main.js.map": "/Avatars/static/js/main.34386852.chunk.js.map",
+    "main.js": "/Avatars/static/js/main.ff27cc28.chunk.js",
+    "main.js.map": "/Avatars/static/js/main.ff27cc28.chunk.js.map",
     "runtime~main.js": "/Avatars/static/js/runtime~main.dcf868ef.js",
     "runtime~main.js.map": "/Avatars/static/js/runtime~main.dcf868ef.js.map",
     "static/js/2.9e7c91e9.chunk.js": "/Avatars/static/js/2.9e7c91e9.chunk.js",
     "static/js/2.9e7c91e9.chunk.js.map": "/Avatars/static/js/2.9e7c91e9.chunk.js.map",
     "index.html": "/Avatars/index.html",
-    "precache-manifest.67b2d428402fa372c72e265449c90a9e.js": "/Avatars/precache-manifest.67b2d428402fa372c72e265449c90a9e.js",
+    "precache-manifest.f5273d9e3403ce3886b1cdbd0533a4ea.js": "/Avatars/precache-manifest.f5273d9e3403ce3886b1cdbd0533a4ea.js",
     "service-worker.js": "/Avatars/service-worker.js",
     "static/css/main.b4cbbbb9.chunk.css.map": "/Avatars/static/css/main.b4cbbbb9.chunk.css.map"
   }
