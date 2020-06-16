@@ -8,6 +8,7 @@
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "react-scripts": "3.1.1",
+    "react-spinners": "^0.8.3",
     "react-webcam": "^3.0.1"
   },
   "scripts": {
@@ -33,5 +34,5 @@
       "last 1 safari version"
     ]
   },
-  "homepage" : "https://richardngo16.github.io/Avatars/"
+  "homepage": "https://richardngo16.github.io/Avatars/"
 }

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import UserAvatar from "./components/UserAvatar";
 import CameraMode from "./components/CameraMode";
+import BeatLoader from "react-spinners/BeatLoader";
 
 // TODO Split this file into different components
 // Use contextapi if needed
@@ -13,7 +14,7 @@ const App = () => {
   const LoadingScreen = () => {
     return (
       <div>
-        <h1>Please Wait ...</h1>
+        <BeatLoader loading={true} />
       </div>
     );
   };
