@@ -29,7 +29,7 @@ export const mapTopType = (apiDataResponse) => {
     return field.name === "wearing hat";
   })[0];
 
-  if (wearingHat.value === "yes" && wearingHat.confidence > 0.8) {
+  if (wearingHat.value === "yes" && wearingHat.confidence > 0.90) {
     return "Hat";
   }
 
@@ -37,7 +37,7 @@ export const mapTopType = (apiDataResponse) => {
     return field.name === "bald";
   })[0];
 
-  if (noHairCheck.value === "yes" && noHairCheck.confidence >= 0.9) {
+  if (noHairCheck.value === "yes" && noHairCheck.confidence >= 0.95) {
     return "NoHair";
   }
 
@@ -118,7 +118,7 @@ export const mapFacialHair = (apiDataResponse) => {
     return field.name === "hair mustache";
   })[0];
 
-  if ((hasMustache.value !== "none") & (hasMustache.confidence > 0.7)) {
+  if ((hasMustache.value !== "none") & (hasMustache.confidence > 0.75)) {
     return "MustacheFancy";
   }
   return "Blank";
